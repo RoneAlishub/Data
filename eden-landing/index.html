@@ -1,415 +1,205 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>חגיגת 200K עוקבים עם עדן ספייסי</title>
-  <meta name="description" content="דף נחיתה לרכישת כרטיסים אונליין לאירוע חגיגת 200K עוקבים עם עדן ספייסי" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>חגיגת 200K עוקבים עם עדן ספייסי</title>
 
-  <!-- Google Tag Placeholder: הטמע כאן את קוד Google Tag Manager/Analytics -->
-  <!-- Meta Pixel Placeholder: הטמע כאן את קוד Meta Pixel -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+<style>
+:root{
+--spicy-red:#E90000;
+--festival-orange:#FF7600;
+--spicy-green:#1ED760;
+--spicy-green-hover:#18B84F;
+--off-white:#FFF8F2;
+--dark:#1A1A1A;
+}
 
-  <style>
-    :root {
-      --spicy-red: #E90000;
-      --festival-orange: #FF7600;
-      --spicy-green: #1ED760;
-      --spicy-green-hover: #18B84F;
-      --off-white: #FFF8F2;
-      --dark: #1A1A1A;
-    }
+*{box-sizing:border-box;}
+html,body{
+margin:0;
+padding:0;
+font-family:"Rubik",sans-serif;
+background:var(--off-white);
+color:var(--dark);
+direction:rtl;
+text-align:right;
+}
 
-    * { box-sizing: border-box; }
+.container{
+width:min(1120px,92%);
+margin:0 auto;
+}
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: "Rubik", "Heebo", sans-serif;
-      background: var(--off-white);
-      color: var(--dark);
-      direction: rtl;
-      text-align: right;
-      scroll-behavior: smooth;
-    }
+.section{padding:4.5rem 0;}
 
-    a { color: inherit; text-decoration: none; }
+.stage-bg{
+background:linear-gradient(125deg,var(--spicy-red),var(--festival-orange));
+color:var(--off-white);
+}
 
-    .container {
-      width: min(1120px, 92%);
-      margin: 0 auto;
-    }
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:2rem;
+align-items:center;
+}
 
-    .section {
-      padding: 4.5rem 0;
-    }
+.hero-image{
+width:100%;
+max-width:420px;
+filter:drop-shadow(0 14px 28px rgba(0,0,0,.3));
+}
 
-    .stage-bg {
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 20% 15%, rgba(255, 118, 0, 0.3), transparent 45%),
-        radial-gradient(circle at 78% 28%, rgba(233, 0, 0, 0.35), transparent 42%),
-        linear-gradient(125deg, var(--spicy-red) 0%, #f34500 55%, var(--festival-orange) 100%);
-      color: var(--off-white);
-      isolation: isolate;
-    }
+.cta-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+border-radius:999px;
+background:var(--spicy-green);
+color:#fff;
+font-weight:800;
+padding:.9rem 1.8rem;
+text-decoration:none;
+transition:.2s ease;
+}
 
-    .stage-bg::before,
-    .stage-bg::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: -1;
-    }
+.cta-btn:hover{
+background:var(--spicy-green-hover);
+transform:scale(1.05);
+}
 
-    /* קרני אור במה */
-    .stage-bg::before {
-      background:
-        conic-gradient(from 215deg at 20% 0%, rgba(255, 248, 242, 0.16), transparent 24%),
-        conic-gradient(from 150deg at 75% 0%, rgba(255, 248, 242, 0.13), transparent 28%),
-        conic-gradient(from 190deg at 52% -5%, rgba(255, 248, 242, 0.08), transparent 25%);
-      mix-blend-mode: screen;
-    }
+/* --- NEW SONG SECTION --- */
 
-    /* קונפטי/נקודות שקופות */
-    .stage-bg::after {
-      background-image:
-        radial-gradient(circle at 12% 24%, rgba(255, 248, 242, 0.2) 0 2px, transparent 2px),
-        radial-gradient(circle at 85% 38%, rgba(255, 248, 242, 0.2) 0 2px, transparent 2px),
-        radial-gradient(circle at 35% 65%, rgba(255, 248, 242, 0.16) 0 1.5px, transparent 1.5px),
-        radial-gradient(circle at 68% 72%, rgba(255, 248, 242, 0.15) 0 2px, transparent 2px),
-        radial-gradient(circle at 48% 18%, rgba(255, 248, 242, 0.12) 0 1.5px, transparent 1.5px);
-      background-size: 220px 220px;
-      opacity: 0.7;
-    }
+.new-song{
+text-align:center;
+padding:2.5rem 0 3rem;
+background:var(--off-white);
+}
 
-    .hero {
-      padding: 4.5rem 0 4rem;
-    }
+.new-song::before{
+content:"";
+display:block;
+width:95px;
+height:6px;
+margin:0 auto 18px;
+border-radius:999px;
+background:linear-gradient(90deg,var(--spicy-red),var(--festival-orange));
+box-shadow:0 0 16px rgba(233,0,0,.55);
+}
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 2rem;
-      align-items: center;
-    }
+.song-text{
+font-weight:800;
+margin-bottom:14px;
+}
 
-    .hero-kicker {
-      margin: 0 0 0.8rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      font-size: 0.95rem;
-      opacity: 0.95;
-    }
+.music-icons{
+display:flex;
+justify-content:center;
+gap:16px;
+flex-wrap:wrap;
+}
 
-    .hero h1 {
-      margin: 0;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      line-height: 1.1;
-      font-weight: 800;
-    }
+.music-btn{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:12px 20px;
+border-radius:999px;
+color:#fff;
+font-weight:900;
+text-decoration:none;
+box-shadow:0 10px 24px rgba(0,0,0,.12);
+transition:.2s ease;
+}
 
-    .hero .name {
-      margin: 0.2rem 0 0.8rem;
-      font-size: clamp(3rem, 9vw, 6rem);
-      line-height: 0.95;
-      font-weight: 900;
-      text-shadow: 0 8px 24px rgba(26, 26, 26, 0.32);
-    }
+.music-btn.youtube{background:#FF0000;}
+.music-btn.spotify{background:#1DB954;}
 
-    .hero-sub {
-      margin: 0 0 1rem;
-      font-size: clamp(1rem, 2.2vw, 1.35rem);
-      font-weight: 500;
-    }
+.music-btn:hover{
+transform:translateY(-2px) scale(1.03);
+}
 
-    .hero-meta {
-      margin: 0 0 1.4rem;
-      font-size: 1rem;
-      font-weight: 500;
-    }
+.music-svg{
+width:22px;
+height:22px;
+color:#fff;
+}
 
-    .cta-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.35rem;
-      border: 0;
-      border-radius: 999px;
-      background: var(--spicy-green);
-      color: var(--off-white);
-      font-weight: 800;
-      font-size: clamp(1rem, 2.6vw, 1.25rem);
-      padding: 0.95rem 1.9rem;
-      box-shadow: 0 8px 20px rgba(26, 26, 26, 0.24);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-      cursor: pointer;
-    }
+/* אנימציה עדינה */
+@media (prefers-reduced-motion:no-preference){
+.music-btn{animation:softPulse 2.8s ease-in-out infinite;}
+.music-btn.youtube{animation-delay:.2s;}
+.music-btn.spotify{animation-delay:.4s;}
 
-    .cta-btn:hover {
-      background: var(--spicy-green-hover);
-      transform: translateY(-2px) scale(1.03);
-      box-shadow: 0 12px 26px rgba(26, 26, 26, 0.3);
-    }
+@keyframes softPulse{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-1px);}
+}
+}
 
-    .cta-btn:focus-visible {
-      outline: 3px solid var(--off-white);
-      outline-offset: 2px;
-      box-shadow: 0 0 0 4px rgba(26, 26, 26, 0.38);
-    }
-
-    .urgency {
-      margin: 0.65rem 0 0;
-      font-size: 0.9rem;
-      font-weight: 500;
-      opacity: 0.95;
-    }
-
-    .hero-image-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-
-    .hero-image-wrap::before {
-      content: "";
-      position: absolute;
-      width: min(420px, 78vw);
-      aspect-ratio: 1 / 1;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255, 118, 0, 0.42) 0%, rgba(233, 0, 0, 0.1) 58%, transparent 75%);
-      filter: blur(6px);
-      z-index: 0;
-    }
-
-    .hero-image {
-      position: relative;
-      z-index: 1;
-      width: min(440px, 90%);
-      height: auto;
-      object-fit: contain;
-      filter: drop-shadow(0 14px 28px rgba(26, 26, 26, 0.32));
-    }
-
-    h2 {
-      margin: 0 0 1.4rem;
-      color: var(--spicy-red);
-      font-size: clamp(1.8rem, 4.2vw, 2.8rem);
-      line-height: 1.15;
-    }
-
-    .cards {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      margin-bottom: 1.5rem;
-    }
-
-    .card {
-      background: var(--off-white);
-      border: 2px solid rgba(233, 0, 0, 0.15);
-      border-radius: 18px;
-      padding: 1rem 1.1rem;
-      box-shadow: 0 6px 14px rgba(26, 26, 26, 0.08);
-      font-size: 1.08rem;
-      line-height: 1.45;
-      font-weight: 500;
-    }
-
-    .card .icon {
-      font-size: 1.55rem;
-      margin-left: 0.35rem;
-    }
-
-    .wow-box {
-      background: linear-gradient(140deg, rgba(233, 0, 0, 0.95), rgba(255, 118, 0, 0.95));
-      color: var(--off-white);
-      border-radius: 24px;
-      padding: 1.8rem;
-      box-shadow: 0 12px 24px rgba(26, 26, 26, 0.2);
-      margin-bottom: 1.3rem;
-    }
-
-    .wow-box p {
-      margin: 0.35rem 0;
-      font-weight: 800;
-      font-size: clamp(1.2rem, 3.7vw, 2rem);
-      line-height: 1.2;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 0.9rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .timeline-item {
-      padding: 1rem 1.1rem;
-      border-radius: 14px;
-      border-right: 6px solid var(--festival-orange);
-      background: rgba(255, 118, 0, 0.12);
-      font-size: 1.05rem;
-      font-weight: 600;
-    }
-
-    .final-cta {
-      padding: 4.6rem 0;
-      text-align: center;
-    }
-
-    .final-cta h2,
-    .final-cta p {
-      color: var(--off-white);
-      margin-right: auto;
-      margin-left: auto;
-    }
-
-    .final-cta h2 {
-      max-width: 16ch;
-      margin-bottom: 0.8rem;
-      font-size: clamp(2rem, 5vw, 3.6rem);
-    }
-
-    .final-cta p {
-      margin-top: 0;
-      margin-bottom: 1.3rem;
-      font-size: clamp(1rem, 2.6vw, 1.35rem);
-      font-weight: 500;
-    }
-
-    .mobile-sticky {
-      display: none;
-    }
-
-    @media (max-width: 920px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-
-      .hero-content {
-        order: 1;
-      }
-
-      .hero-image-wrap {
-        order: 2;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      body {
-        padding-bottom: 86px;
-      }
-
-      .section {
-        padding: 3.4rem 0;
-      }
-
-      .mobile-sticky {
-        position: fixed;
-        inset-inline: 0;
-        bottom: 0;
-        display: flex;
-        justify-content: center;
-        padding: 0.75rem 0.9rem;
-        background: rgba(26, 26, 26, 0.92);
-        backdrop-filter: blur(4px);
-        z-index: 99;
-      }
-
-      .mobile-sticky .cta-btn {
-        width: min(480px, 100%);
-      }
-    }
-  </style>
+</style>
 </head>
 <body>
-  <header class="stage-bg hero section">
-    <div class="container hero-grid">
-      <div class="hero-image-wrap">
-        <img class="hero-image" src="hero.png" alt="עדן ספייסי על הבמה" loading="eager" />
-      </div>
 
-      <div class="hero-content">
-        <p class="hero-kicker">DREAM STAGE</p>
-        <h1>חגיגת 200K עוקבים עם</h1>
-        <p class="name">עדן ספייסי</p>
-        <p class="hero-sub">לייב סטייג' — משפחתי, שמח, צבעוני ועוצמתי!</p>
-        <p class="hero-meta">📍 מרכז עסקים עזריאלי חולון &nbsp; | &nbsp; 📅 18.3.26</p>
-        <a class="cta-btn" aria-label="קנה כרטיס עכשיו" href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-190&saleChannelCode=WEB&languageid=he_IL" target="_blank" rel="noopener">🔥 קנה כרטיס עכשיו</a>
-        <p class="urgency">⚠ מספר המקומות מוגבל</p>
-      </div>
-    </div>
-  </header>
+<header class="stage-bg section">
+<div class="container hero-grid">
 
-  <main>
-    <section class="section" id="happenings">
-      <div class="container">
-        <h2>🚀 מה הולך לקרות שם?!</h2>
-        <div class="cards">
-          <article class="card"><span class="icon">🎤</span>הופעה חיה של השיר החדש (לפני כולם!)</article>
-          <article class="card"><span class="icon">⭐</span>אתגר המזלות הגדול</article>
-          <article class="card"><span class="icon">✨</span>סגולות וחיזוקים חודש ניסן</article>
-          <article class="card"><span class="icon">🎮</span>תפאורת גיימינג: בריינרוט • בראול סטארס • משחקי הדיונון</article>
-          <article class="card"><span class="icon">🍭</span>עמדות טעימות וחריפות של טסה ועוד הפתעות</article>
-        </div>
-        <a class="cta-btn" aria-label="שריין מקום עכשיו" href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-190&saleChannelCode=WEB&languageid=he_IL" target="_blank" rel="noopener">🎟 שריין מקום עכשיו</a>
-      </div>
-    </section>
+<div>
+<img class="hero-image" src="hero.png" alt="עדן ספייסי על הבמה">
+</div>
 
-    <section class="section" id="prizes">
-      <div class="container">
-        <h2>🎁 פרסים והגרלות</h2>
-        <div class="wow-box" aria-label="פרסים מרכזיים באירוע">
-          <p>📱 אייפון 17 חדש דנדש!!!</p>
-          <p>📚 סדרת הספרים "האוצרות האבודים"</p>
-          <p>🎉 ועוד הפתעות שוות במיוחד</p>
-        </div>
-        <a class="cta-btn" aria-label="אני רוצה להיות שם" href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-190&saleChannelCode=WEB&languageid=he_IL" target="_blank" rel="noopener">🔥 אני רוצה להיות שם!</a>
-      </div>
-    </section>
+<div>
+<h1>חגיגת 200K עוקבים עם</h1>
+<h2 style="font-size:3.5rem;margin:.2rem 0;">עדן ספייסי</h2>
+<p>📍 מרכז עסקים עזריאלי חולון | 📅 18.3.26</p>
 
-    <section class="section" id="schedule">
-      <div class="container">
-        <h2>🕒 לו״ז</h2>
-        <div class="timeline" aria-label="לוח זמנים האירוע">
-          <div class="timeline-item">18:00 – התכנסות וכיבוד</div>
-          <div class="timeline-item">18:30 – תחילת האירוע</div>
-          <div class="timeline-item">19:00 – טקס עוגת ה-200K + הכרזת הזוכים</div>
-        </div>
-        <a class="cta-btn" aria-label="קנה כרטיס עכשיו" href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-190&saleChannelCode=WEB&languageid=he_IL" target="_blank" rel="noopener">🎟 קנה כרטיס עכשיו</a>
-      </div>
-    </section>
-  </main>
+<a class="cta-btn"
+href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-190&saleChannelCode=WEB&languageid=he_IL"
+target="_blank" rel="noopener">
+🔥 קנה כרטיס עכשיו
+</a>
 
-  <section class="stage-bg final-cta">
-    <div class="container">
-      <h2>🎉 אל תפספסו את חגיגת ה-200K בלייב!</h2>
-      <p>זו ההזדמנות לפגוש את עדן ספייסי על במה אמיתית</p>
-      <a class="cta-btn" aria-label="קנה כרטיס עכשיו" href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-190&saleChannelCode=WEB&languageid=he_IL" target="_blank" rel="noopener">🔥 קנה כרטיס עכשיו</a>
-    </div>
-  </section>
+</div>
+</div>
+</header>
 
-  <div class="mobile-sticky" aria-hidden="false">
-    <a class="cta-btn" aria-label="קנה כרטיס עכשיו" href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-190&saleChannelCode=WEB&languageid=he_IL" target="_blank" rel="noopener">🔥 קנה כרטיס עכשיו</a>
-  </div>
+<!-- NEW SONG BLOCK -->
+<section class="new-song">
+<div class="container">
+<p class="song-text">לשמיעת השיר החדש</p>
 
-  <script>
-    // JavaScript intentionally minimal for performance.
-  </script>
-</body>
-</html>
-    // JavaScript intentionally minimal for performance.
-  </script>
+<div class="music-icons">
+
+<a class="music-btn youtube"
+href="https://youtu.be/jobfUpJZJfI?si=AyFIZoRUo1aYPsh7"
+target="_blank" rel="noopener">
+
+<svg class="music-svg" viewBox="0 0 24 24">
+<path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8z"/>
+</svg>
+
+YouTube
+</a>
+
+<a class="music-btn spotify"
+href="https://open.spotify.com/track/2afrK3A357tLHXmAP4xQNO?si=XQNCahNuSmO37pYm7wgMwQ"
+target="_blank" rel="noopener">
+
+<svg class="music-svg" viewBox="0 0 24 24">
+<circle fill="currentColor" cx="12" cy="12" r="12"/>
+</svg>
+
+Spotify
+</a>
+
+</div>
+</div>
+</section>
+
 </body>
 </html>
