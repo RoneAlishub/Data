@@ -21,6 +21,11 @@
       --spicy-green-hover: #18B84F;
       --off-white: #FFF8F2;
       --dark: #1A1A1A;
+
+      --shavuot-cream: #FFFDF7;
+      --shavuot-gold: #D8B35A;
+      --shavuot-leaf: #7BAE4A;
+      --shavuot-lilac: #F4ECFF;
     }
 
     * { box-sizing: border-box; }
@@ -36,6 +41,10 @@
       scroll-behavior: smooth;
     }
 
+    body {
+      overflow-x: hidden;
+    }
+
     a { color: inherit; text-decoration: none; }
 
     .container {
@@ -45,6 +54,18 @@
 
     .section {
       padding: 4.5rem 0;
+      position: relative;
+    }
+
+    .section::before {
+      content: "";
+      display: block;
+      width: 72px;
+      height: 4px;
+      border-radius: 999px;
+      margin-bottom: 1.2rem;
+      background: linear-gradient(90deg, var(--shavuot-gold), var(--shavuot-leaf));
+      opacity: 0.75;
     }
 
     .stage-bg {
@@ -67,7 +88,6 @@
       z-index: -1;
     }
 
-    /* קרני אור במה */
     .stage-bg::before {
       background:
         conic-gradient(from 215deg at 20% 0%, rgba(255, 248, 242, 0.16), transparent 24%),
@@ -76,7 +96,6 @@
       mix-blend-mode: screen;
     }
 
-    /* קונפטי/נקודות שקופות */
     .stage-bg::after {
       background-image:
         radial-gradient(circle at 12% 24%, rgba(255, 248, 242, 0.2) 0 2px, transparent 2px),
@@ -90,6 +109,10 @@
 
     .hero {
       padding: 4.5rem 0 4rem;
+    }
+
+    .hero::before {
+      display: none;
     }
 
     .hero-grid {
@@ -157,10 +180,11 @@
       box-shadow: 0 12px 26px rgba(26, 26, 26, 0.3);
     }
 
-    .cta-btn:focus-visible {
+    .cta-btn:focus-visible,
+    .music-btn:focus-visible {
       outline: 3px solid var(--off-white);
       outline-offset: 2px;
-      box-shadow: 0 0 0 4px rgba(26, 26, 26, 0.38);
+      box-shadow: 0 0 0 4px rgba(26, 26, 26, 0.18);
     }
 
     .urgency {
@@ -168,6 +192,31 @@
       font-size: 0.9rem;
       font-weight: 500;
       opacity: 0.95;
+    }
+
+    .shavuot-badge {
+      margin: 0.9rem 0 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      background: rgba(255, 253, 247, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      color: var(--off-white);
+      font-size: 0.95rem;
+      font-weight: 700;
+      box-shadow: 0 8px 18px rgba(26, 26, 26, 0.12);
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-content::after {
+      content: "🌾 ✿ 🤍 ✿ 🌾";
+      display: block;
+      margin-top: 1rem;
+      font-size: 1.05rem;
+      letter-spacing: 0.18rem;
+      opacity: 0.9;
     }
 
     .hero-image-wrap {
@@ -204,6 +253,12 @@
       line-height: 1.15;
     }
 
+    h2::after {
+      content: " ✿";
+      color: var(--shavuot-gold);
+      font-size: 0.85em;
+    }
+
     .cards {
       display: grid;
       gap: 1rem;
@@ -212,8 +267,8 @@
     }
 
     .card {
-      background: var(--off-white);
-      border: 2px solid rgba(233, 0, 0, 0.15);
+      background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,253,247,0.96));
+      border: 2px solid rgba(216, 179, 90, 0.22);
       border-radius: 18px;
       padding: 1rem 1.1rem;
       box-shadow: 0 6px 14px rgba(26, 26, 26, 0.08);
@@ -228,12 +283,23 @@
     }
 
     .wow-box {
+      position: relative;
+      overflow: hidden;
       background: linear-gradient(140deg, rgba(233, 0, 0, 0.95), rgba(255, 118, 0, 0.95));
       color: var(--off-white);
       border-radius: 24px;
       padding: 1.8rem;
       box-shadow: 0 12px 24px rgba(26, 26, 26, 0.2);
       margin-bottom: 1.3rem;
+    }
+
+    .wow-box::before {
+      content: "✿ 🌾 ✿";
+      position: absolute;
+      top: 12px;
+      left: 18px;
+      font-size: 0.95rem;
+      opacity: 0.22;
     }
 
     .wow-box p {
@@ -252,15 +318,27 @@
     .timeline-item {
       padding: 1rem 1.1rem;
       border-radius: 14px;
-      border-right: 6px solid var(--festival-orange);
-      background: rgba(255, 118, 0, 0.12);
+      border-right: 6px solid var(--shavuot-gold);
+      background: linear-gradient(180deg, rgba(255, 118, 0, 0.10), rgba(255, 253, 247, 0.8));
       font-size: 1.05rem;
       font-weight: 600;
+    }
+
+    .shavuot-note {
+      margin: -0.4rem 0 1.2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--dark);
+      opacity: 0.86;
     }
 
     .final-cta {
       padding: 4.6rem 0;
       text-align: center;
+    }
+
+    .final-cta::before {
+      display: none;
     }
 
     .final-cta h2,
@@ -276,6 +354,10 @@
       font-size: clamp(2rem, 5vw, 3.6rem);
     }
 
+    .final-cta h2::after {
+      color: rgba(255,255,255,0.72);
+    }
+
     .final-cta p {
       margin-top: 0;
       margin-bottom: 1.3rem;
@@ -287,21 +369,140 @@
       display: none;
     }
 
+    .new-song {
+      text-align: center;
+      padding: 2.4rem 0 2.7rem;
+      background: var(--off-white);
+    }
+
+    .new-song::before {
+      content: "";
+      display: block;
+      width: 92px;
+      height: 6px;
+      margin: 0 auto 16px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--spicy-red), var(--festival-orange));
+      box-shadow: 0 0 14px rgba(233, 0, 0, 0.55);
+    }
+
+    .song-text {
+      margin: 0 0 14px;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--dark);
+      opacity: .92;
+    }
+
+    .music-icons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .music-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      color: #fff;
+      font-weight: 900;
+      box-shadow: 0 10px 24px rgba(0,0,0,.12);
+      transform: translateY(0);
+      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+      will-change: transform;
+    }
+
+    .music-btn.youtube { background: #FF0000; }
+    .music-btn.spotify { background: #1DB954; }
+
+    .music-svg {
+      width: 22px;
+      height: 22px;
+      color: #fff;
+      flex: 0 0 auto;
+    }
+
+    .music-btn:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 14px 34px rgba(0,0,0,.16);
+      filter: brightness(1.02);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .music-btn { animation: softPulse 2.6s ease-in-out infinite; }
+      .music-btn.youtube { animation-delay: .15s; }
+      .music-btn.spotify { animation-delay: .35s; }
+
+      @keyframes softPulse {
+        0%,100% { transform: translateY(0); }
+        50% { transform: translateY(-1px); }
+      }
+    }
+
     @media (max-width: 920px) {
       .hero-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
       }
 
-      .hero-content { order: 1; }
-      .hero-image-wrap { order: 2; }
+      .hero-content {
+        order: 1;
+        text-align: center;
+      }
 
-      .cards { grid-template-columns: 1fr; }
+      .hero-image-wrap {
+        order: 2;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .section::before {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      h2,
+      .shavuot-note {
+        text-align: center;
+      }
     }
 
     @media (max-width: 768px) {
-      body { padding-bottom: 86px; }
-      .section { padding: 3.4rem 0; }
+      body {
+        padding-bottom: 86px;
+      }
+
+      .section {
+        padding: 3.4rem 0;
+      }
+
+      .hero {
+        padding: 3.5rem 0 3rem;
+      }
+
+      .hero .name {
+        font-size: clamp(2.5rem, 13vw, 4.5rem);
+      }
+
+      .hero-meta {
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .shavuot-badge {
+        font-size: 0.86rem;
+        line-height: 1.4;
+      }
+
+      .hero-content::after {
+        font-size: 0.95rem;
+        letter-spacing: 0.08rem;
+      }
 
       .mobile-sticky {
         position: fixed;
@@ -319,85 +520,6 @@
         width: min(480px, 100%);
       }
     }
-
-    /* --- NEW SONG (YouTube/Spotify) --- */
-    .new-song{
-      text-align:center;
-      padding: 2.4rem 0 2.7rem;
-      background: var(--off-white);
-    }
-
-    .new-song::before{
-      content:"";
-      display:block;
-      width: 92px;
-      height: 6px;
-      margin: 0 auto 16px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, var(--spicy-red), var(--festival-orange));
-      box-shadow: 0 0 14px rgba(233, 0, 0, 0.55);
-    }
-
-    .song-text{
-      margin: 0 0 14px;
-      font-size: 1rem;
-      font-weight: 800;
-      color: var(--dark);
-      opacity: .92;
-    }
-
-    .music-icons{
-      display:flex;
-      justify-content:center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .music-btn{
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      padding: 12px 18px;
-      border-radius: 999px;
-      color: #fff;
-      font-weight: 900;
-      box-shadow: 0 10px 24px rgba(0,0,0,.12);
-      transform: translateY(0);
-      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
-      will-change: transform;
-    }
-
-    .music-btn.youtube{ background:#FF0000; }
-    .music-btn.spotify{ background:#1DB954; }
-
-    .music-svg{
-      width: 22px;
-      height: 22px;
-      color: #fff;
-      flex: 0 0 auto;
-    }
-
-    .music-btn:hover{
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 14px 34px rgba(0,0,0,.16);
-      filter: brightness(1.02);
-    }
-
-    .music-btn:focus-visible{
-      outline: 3px solid rgba(30, 215, 96, .55);
-      outline-offset: 3px;
-    }
-
-    @media (prefers-reduced-motion: no-preference){
-      .music-btn{ animation: softPulse 2.6s ease-in-out infinite; }
-      .music-btn.youtube{ animation-delay: .15s; }
-      .music-btn.spotify{ animation-delay: .35s; }
-
-      @keyframes softPulse{
-        0%,100%{ transform: translateY(0); }
-        50%{ transform: translateY(-1px); }
-      }
-    }
   </style>
 </head>
 
@@ -413,7 +535,7 @@
         <h1>חגיגת 200K עוקבים עם</h1>
         <p class="name">עדן ספייסי</p>
         <p class="hero-sub">לייב סטייג' — משפחתי, שמח, צבעוני ועוצמתי!</p>
-        <p class="hero-meta">📍 מרכז עסקים עזריאלי חולון &nbsp; | &nbsp; 📅 20.05.26</p>
+        <p class="hero-meta">📍 מרכז עסקים עזריאלי חולון &nbsp; | &nbsp; 📅 יום רביעי, 20/05/2026 18:00</p>
 
         <a class="cta-btn"
            aria-label="קנה כרטיס עכשיו"
@@ -421,11 +543,11 @@
            target="_blank" rel="noopener">🔥 קנה כרטיס עכשיו</a>
 
         <p class="urgency">⚠ מספר המקומות מוגבל</p>
+        <p class="shavuot-badge">🌾 מהדורת שבועות חגיגית • באווירה לבנה, פרחונית ומשפחתית</p>
       </div>
     </div>
   </header>
 
-  <!-- NEW SONG BLOCK -->
   <section class="new-song" aria-label="לשמיעת השיר החדש">
     <div class="container">
       <p class="song-text">לשמיעת השיר החדש</p>
@@ -481,6 +603,7 @@
     <section class="section" id="prizes">
       <div class="container">
         <h2>🎁 פרסים והגרלות</h2>
+
         <div class="wow-box" aria-label="פרסים מרכזיים באירוע">
           <p>📱 אייפון 17 חדש דנדש!!!</p>
           <p>📚 סדרת הספרים "האוצרות האבודים"</p>
@@ -497,6 +620,8 @@
     <section class="section" id="schedule">
       <div class="container">
         <h2>🕒 לו״ז</h2>
+        <p class="shavuot-note">🤍 ערב חגיגי ברוח שבועות עם אווירה לבנה, שמחה ומשפחתית</p>
+
         <div class="timeline" aria-label="לוח זמנים האירוע">
           <div class="timeline-item">18:00 – התכנסות וכיבוד</div>
           <div class="timeline-item">18:30 – תחילת האירוע (תחרויות, שירים, דברי תורה, אתגר המזלות)</div>
