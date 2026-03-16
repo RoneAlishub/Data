@@ -43,6 +43,7 @@
 
     body {
       overflow-x: hidden;
+      position: relative;
     }
 
     a {
@@ -53,6 +54,8 @@
     .container {
       width: min(1120px, 92%);
       margin: 0 auto;
+      position: relative;
+      z-index: 2;
     }
 
     .section {
@@ -88,7 +91,7 @@
       position: absolute;
       inset: 0;
       pointer-events: none;
-      z-index: -1;
+      z-index: 0;
     }
 
     .stage-bg::before {
@@ -123,6 +126,8 @@
       grid-template-columns: 1.05fr 0.95fr;
       gap: 2rem;
       align-items: center;
+      position: relative;
+      z-index: 2;
     }
 
     .hero-kicker {
@@ -163,6 +168,8 @@
 
     .hero-content {
       text-align: center;
+      position: relative;
+      z-index: 2;
     }
 
     .cta-btn {
@@ -183,6 +190,8 @@
       box-shadow: 0 8px 20px rgba(26, 26, 26, 0.24);
       transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
       cursor: pointer;
+      position: relative;
+      z-index: 2;
     }
 
     .cta-btn:hover {
@@ -237,6 +246,7 @@
       justify-content: center;
       align-items: center;
       position: relative;
+      z-index: 2;
     }
 
     .hero-image-wrap::before {
@@ -265,12 +275,21 @@
       font-size: clamp(1.8rem, 4.2vw, 2.8rem);
       line-height: 1.15;
       text-align: center;
+      position: relative;
+    }
+
+    h2::before {
+      content: "✿";
+      color: var(--shavuot-gold);
+      font-size: 0.85em;
+      margin-left: 0.45rem;
     }
 
     h2::after {
-      content: " ✿";
+      content: "✿";
       color: var(--shavuot-gold);
       font-size: 0.85em;
+      margin-right: 0.45rem;
     }
 
     .cards {
@@ -290,6 +309,8 @@
       line-height: 1.45;
       font-weight: 500;
       text-align: right;
+      position: relative;
+      z-index: 2;
     }
 
     .card .icon {
@@ -307,6 +328,7 @@
       box-shadow: 0 12px 24px rgba(26, 26, 26, 0.2);
       margin-bottom: 1.3rem;
       text-align: center;
+      z-index: 2;
     }
 
     .wow-box::before {
@@ -338,6 +360,8 @@
       background: linear-gradient(180deg, rgba(255, 118, 0, 0.10), rgba(255, 253, 247, 0.8));
       font-size: 1.05rem;
       font-weight: 600;
+      position: relative;
+      z-index: 2;
     }
 
     .shavuot-note {
@@ -364,6 +388,8 @@
       margin-right: auto;
       margin-left: auto;
       text-align: center;
+      position: relative;
+      z-index: 2;
     }
 
     .final-cta h2 {
@@ -372,6 +398,7 @@
       font-size: clamp(2rem, 5vw, 3.6rem);
     }
 
+    .final-cta h2::before,
     .final-cta h2::after {
       color: rgba(255,255,255,0.72);
     }
@@ -391,6 +418,8 @@
       text-align: center;
       padding: 2.4rem 0 2.7rem;
       background: var(--off-white);
+      position: relative;
+      z-index: 2;
     }
 
     .new-song::before {
@@ -432,6 +461,8 @@
       transform: translateY(0);
       transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
       will-change: transform;
+      position: relative;
+      z-index: 2;
     }
 
     .music-btn.youtube { background: #FF0000; }
@@ -448,6 +479,101 @@
       transform: translateY(-2px) scale(1.02);
       box-shadow: 0 14px 34px rgba(0,0,0,.16);
       filter: brightness(1.02);
+    }
+
+    .section-floral {
+      text-align: center;
+      font-size: 1.15rem;
+      color: var(--shavuot-gold);
+      opacity: 0.8;
+      margin: -0.3rem 0 1.2rem;
+      letter-spacing: 0.3rem;
+      animation: floralGlow 4s ease-in-out infinite;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* שיבולים בפינות הדף */
+    .wheat-decoration {
+      position: fixed;
+      pointer-events: none;
+      opacity: 0.12;
+      z-index: 1;
+      animation: wheatFloat 7s ease-in-out infinite;
+    }
+
+    .wheat-left {
+      bottom: 30px;
+      left: 8px;
+      width: 150px;
+    }
+
+    .wheat-right {
+      top: 110px;
+      right: 8px;
+      width: 150px;
+      animation-delay: 1.2s;
+    }
+
+    .wheat-decoration svg {
+      width: 100%;
+      height: auto;
+      fill: none;
+      stroke: #D8B35A;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* שיבולים מאחורי ה-Hero */
+    .hero-wheat {
+      position: absolute;
+      pointer-events: none;
+      opacity: 0.12;
+      z-index: 1;
+      width: 150px;
+      animation: wheatFloat 6s ease-in-out infinite;
+    }
+
+    .hero-wheat-left {
+      bottom: 10px;
+      left: 4%;
+    }
+
+    .hero-wheat-right {
+      top: 18%;
+      right: 4%;
+      animation-delay: 1.5s;
+    }
+
+    .hero-wheat svg {
+      width: 100%;
+      height: auto;
+      fill: none;
+      stroke: rgba(255, 248, 242, 0.7);
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @keyframes wheatFloat {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-6px) rotate(1deg);
+      }
+    }
+
+    @keyframes floralGlow {
+      0%, 100% {
+        opacity: 0.72;
+        transform: translateY(0);
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(-2px);
+      }
     }
 
     @media (prefers-reduced-motion: no-preference) {
@@ -519,6 +645,22 @@
         letter-spacing: 0.08rem;
       }
 
+      .wheat-left,
+      .wheat-right {
+        width: 95px;
+        opacity: 0.08;
+      }
+
+      .hero-wheat {
+        width: 90px;
+        opacity: 0.1;
+      }
+
+      .section-floral {
+        font-size: 1rem;
+        letter-spacing: 0.18rem;
+      }
+
       .mobile-sticky {
         position: fixed;
         inset-inline: 0;
@@ -539,7 +681,55 @@
 </head>
 
 <body>
+  <div class="wheat-decoration wheat-left" aria-hidden="true">
+    <svg viewBox="0 0 120 240">
+      <path d="M60 230 C60 200 40 170 60 140 C80 110 60 80 60 50"/>
+      <path d="M60 150 L40 130"/>
+      <path d="M60 150 L80 130"/>
+      <path d="M60 120 L40 100"/>
+      <path d="M60 120 L80 100"/>
+      <path d="M60 90 L40 70"/>
+      <path d="M60 90 L80 70"/>
+    </svg>
+  </div>
+
+  <div class="wheat-decoration wheat-right" aria-hidden="true">
+    <svg viewBox="0 0 120 240">
+      <path d="M60 230 C60 200 80 170 60 140 C40 110 60 80 60 50"/>
+      <path d="M60 150 L40 130"/>
+      <path d="M60 150 L80 130"/>
+      <path d="M60 120 L40 100"/>
+      <path d="M60 120 L80 100"/>
+      <path d="M60 90 L40 70"/>
+      <path d="M60 90 L80 70"/>
+    </svg>
+  </div>
+
   <header class="stage-bg hero section">
+    <div class="hero-wheat hero-wheat-left" aria-hidden="true">
+      <svg viewBox="0 0 120 220">
+        <path d="M60 210 C60 180 42 155 60 130 C78 105 60 80 60 45"/>
+        <path d="M60 145 L42 128"/>
+        <path d="M60 145 L78 128"/>
+        <path d="M60 115 L42 98"/>
+        <path d="M60 115 L78 98"/>
+        <path d="M60 85 L42 68"/>
+        <path d="M60 85 L78 68"/>
+      </svg>
+    </div>
+
+    <div class="hero-wheat hero-wheat-right" aria-hidden="true">
+      <svg viewBox="0 0 120 220">
+        <path d="M60 210 C60 180 78 155 60 130 C42 105 60 80 60 45"/>
+        <path d="M60 145 L42 128"/>
+        <path d="M60 145 L78 128"/>
+        <path d="M60 115 L42 98"/>
+        <path d="M60 115 L78 98"/>
+        <path d="M60 85 L42 68"/>
+        <path d="M60 85 L78 68"/>
+      </svg>
+    </div>
+
     <div class="container hero-grid">
       <div class="hero-image-wrap">
         <img class="hero-image" src="hero.png" alt="עדן ספייסי על הבמה" loading="eager" />
@@ -598,6 +788,7 @@
   <main>
     <section class="section" id="happenings">
       <div class="container">
+        <div class="section-floral" aria-hidden="true">✿ ❀ 🌾 ❀ ✿</div>
         <h2>🚀 מה הולך לקרות שם?!</h2>
 
         <div class="cards">
@@ -617,6 +808,7 @@
 
     <section class="section" id="prizes">
       <div class="container">
+        <div class="section-floral" aria-hidden="true">✿ ❀ 🌾 ❀ ✿</div>
         <h2>🎁 פרסים והגרלות</h2>
 
         <div class="wow-box" aria-label="פרסים מרכזיים באירוע">
@@ -634,6 +826,7 @@
 
     <section class="section" id="schedule">
       <div class="container">
+        <div class="section-floral" aria-hidden="true">✿ ❀ 🌾 ❀ ✿</div>
         <h2>🕒 לו״ז</h2>
         <p class="shavuot-note">🤍 ערב חגיגי ברוח שבועות עם אווירה לבנה, שמחה ומשפחתית</p>
 
