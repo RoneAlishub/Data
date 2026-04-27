@@ -1,117 +1,243 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>סדנת טיקטוק עם עדן ספייסי</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>סדנת טיקטוק - עדן ספייסי</title>
 
-  <style>
-    body {
-      margin:0;
-      font-family: Arial;
-      background:#fff;
-      color:#111;
-      text-align:center;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700;900&display=swap" rel="stylesheet">
 
-    .hero {
-      background: linear-gradient(135deg,#ff3c00,#ff7a00);
-      color:white;
-      padding:40px 20px;
-    }
+<style>
+body {
+  margin:0;
+  font-family:'Rubik', sans-serif;
+  background:#fff;
+  color:#111;
+}
 
-    h1 {
-      font-size:28px;
-      line-height:1.4;
-    }
+/* HERO */
+.hero {
+  background: linear-gradient(135deg,#E90000,#FF6A00);
+  color:white;
+  padding:60px 20px;
+}
 
-    .section {
-      padding:30px 20px;
-      max-width:800px;
-      margin:auto;
-    }
+.container {
+  max-width:1100px;
+  margin:auto;
+}
 
-    .box {
-      background:#f5f5f5;
-      padding:15px;
-      border-radius:10px;
-      margin-bottom:10px;
-    }
+.hero-grid {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+}
 
-    .cta {
-      background:#00c853;
-      color:white;
-      padding:15px 25px;
-      border-radius:50px;
-      display:inline-block;
-      margin-top:20px;
-      font-weight:bold;
-    }
+.hero-text {
+  flex:1;
+}
 
-    @media (max-width:600px){
-      h1 {font-size:22px;}
-    }
-  </style>
+.hero h1 {
+  font-size:38px;
+  margin-bottom:10px;
+  font-weight:900;
+}
+
+.hero h2 {
+  font-size:20px;
+  margin-bottom:20px;
+}
+
+.hero p {
+  font-size:16px;
+  line-height:1.6;
+}
+
+.hero img {
+  width:350px;
+  max-width:100%;
+}
+
+/* BUTTON */
+.cta {
+  display:inline-block;
+  background:#00C853;
+  color:white;
+  padding:15px 30px;
+  border-radius:50px;
+  font-weight:bold;
+  margin-top:20px;
+}
+
+/* SECTION */
+.section {
+  padding:50px 20px;
+  text-align:center;
+}
+
+.section h2 {
+  color:#E90000;
+  margin-bottom:20px;
+}
+
+/* CARDS */
+.cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+  margin-top:20px;
+}
+
+.card {
+  background:#f7f7f7;
+  padding:20px;
+  border-radius:15px;
+  font-weight:500;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* DETAILS */
+.details {
+  background:#fff5f0;
+  padding:30px;
+  border-radius:20px;
+  margin-top:20px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero h1 {font-size:28px;}
+  .hero-grid {flex-direction:column;}
+}
+
+/* STICKY CTA */
+.sticky {
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background:#111;
+  padding:10px;
+  text-align:center;
+}
+
+.sticky a {
+  background:#00C853;
+  padding:12px 25px;
+  border-radius:50px;
+  color:white;
+  font-weight:bold;
+}
+</style>
 </head>
 
 <body>
 
-<div class="hero">
-<h1>
-🔥 סדנת טיקטוק – איך להיות חריף ברשתות החברתיות 🌶️| עם משפיען הרשת עדן ספייסי 🔥  
-</h1>
+<!-- HERO -->
+<section class="hero">
+<div class="container hero-grid">
+
+<div class="hero-text">
+<h1>🔥 סדנת טיקטוק – איך להיות חריף ברשתות החברתיות 🌶️</h1>
+<h2>עם משפיען הרשת עדן ספייסי</h2>
 
 <p>
 רוצה לדעת איך להפוך את עצמך ליותר בולט שאי אפשר להתעלם ממנו?  
-איך להביא צפיות, קהל ולקוחות דרך טיקטוק?  
+איך להביא צפיות, קהל ולקוחות דרך טיקטוק?
 </p>
 
-<a class="cta" href="#">🎟️ שריינו מקום עכשיו</a>
+<a href="#" class="cta">🎟️ שריינו מקום עכשיו</a>
 </div>
 
-<div class="section">
+<img src="hero.png" alt="עדן ספייסי">
 
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+<div class="container">
 <p>
 אני עדן ספייסי, יוצר תוכן עם מעל 205,000 עוקבים ומיליוני צפיות בכל חודש –  
-ובסדנה הזו אני מלמד אותך איך להיות חד, חריף ומדויק ברשתות החברתיות.  
+ובסדנה הזו אני מלמד אותך איך להיות חד, חריף ומדויק ברשתות החברתיות.
 </p>
+</div>
+</section>
 
+<!-- WHAT YOU LEARN -->
+<section class="section">
+<div class="container">
 <h2>🎯 מה נלמד בסדנה:</h2>
 
-<div class="box">איך לעמוד מול מצלמה בביטחון מלא</div>
-<div class="box">איך לדבר בצורה חדה שמושכת קהל</div>
-<div class="box">איך לבנות סרטונים שתופסים בשנייה הראשונה</div>
-<div class="box">איך להפוך תוכן לכלי שמביא לקוחות</div>
-<div class="box">איך לבלוט ולהיות חריף ברשתות החברתיות</div>
+<div class="cards">
+<div class="card">🎥 איך לעמוד מול מצלמה בביטחון מלא</div>
+<div class="card">🧠 איך לדבר בצורה חדה שמושכת קהל</div>
+<div class="card">⚡ איך לבנות סרטונים שתופסים בשנייה הראשונה</div>
+<div class="card">💰 איך להפוך תוכן לכלי שמביא לקוחות</div>
+<div class="card">🌶️ איך לבלוט ולהיות חריף ברשתות החברתיות</div>
+</div>
 
+</div>
+</section>
+
+<!-- WHO -->
+<section class="section">
+<div class="container">
 <h2>🚀 למי זה מתאים?</h2>
 
-<div class="box">בעלי עסקים שרוצים להביא לקוחות מטיקטוק</div>
-<div class="box">יוצרים בתחילת הדרך שרוצים לפרוץ</div>
-<div class="box">נוער שרוצה להתחזק מול מצלמה ולבנות ביטחון</div>
+<div class="cards">
+<div class="card">בעלי עסקים שרוצים להביא לקוחות מטיקטוק</div>
+<div class="card">יוצרים בתחילת הדרך שרוצים לפרוץ</div>
+<div class="card">נוער שרוצה להתחזק מול מצלמה ולבנות ביטחון</div>
+</div>
 
-<h2>📍 פרטים</h2>
+</div>
+</section>
+
+<!-- DETAILS -->
+<section class="section">
+<div class="container">
+
+<h2>📍 פרטי הסדנה</h2>
+
+<div class="details">
+
+<p>📍 סדנת טיקטוק בשיתוף הוט סינמה</p>
+<p>🎟️ מוגבל ל-60 כרטיסים בלבד!</p>
+<p>⏳ מתקיימת בשני סבבים – כל הקודם זוכה</p>
+<p>💰 עלות כרטיס~ 150 שקלים</p>
+
+<br>
 
 <p>
-📍 סדנת טיקטוק בשיתוף הוט סינמה  
-<br><br>
-🎟️ מוגבל ל-60 כרטיסים בלבד!  
-<br><br>
-⏳ מתקיימת בשני סבבים – כל הקודם זוכה  
-<br><br>
-עלות כרטיס~ 150 שקלים 
+📍 מרכז עסקים עזריאלי חולון | 📅 יום רביעי, 20/05/2026
 </p>
 
 <p>
-📍 מרכז עסקים עזריאלי חולון   |   📅 יום רביעי, 20/05/2026
-<br><br>
-סבב ראשון 17:00 ~ 18:30
+סבב ראשון 17:00 ~ 18:30  
 <br>
 סבב שני 19:00 ~ 20:30
 </p>
 
-<a class="cta" href="#">🎟️ שריינו מקום עכשיו</a>
+</div>
 
+<a href="#" class="cta">🎟️ שריינו מקום עכשיו</a>
+
+</div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section">
+<div class="container">
+<h2>🎟️ המקומות מוגבלים – אל תחכו</h2>
+<a href="#" class="cta">שריינו מקום עכשיו 🔥</a>
+</div>
+</section>
+
+<!-- STICKY -->
+<div class="sticky">
+<a href="#">🎟️ הרשמה לסדנה</a>
 </div>
 
 </body>
