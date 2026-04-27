@@ -1,881 +1,118 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>חגיגת 200K עוקבים עם עדן ספייסי</title>
-  <meta name="description" content="דף נחיתה לרכישת כרטיסים אונליין לאירוע חגיגת 200K עוקבים עם עדן ספייסי" />
-<!-- Open Graph -->
-<meta property="og:title" content="🎉 חגיגת 200K עוקבים עם עדן ספייסי">
-<meta property="og:description" content="מופע לייב מיוחד לילדים ולמשפחות – הופעה, תחרויות, פרסים והפתעות!">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://ronealishub.github.io/Data/eden-landing/">
-<meta property="og:image" content="https://ronealishub.github.io/Data/eden-landing/hero.png">
-
-<!-- WhatsApp / Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="🎉 חגיגת 200K עוקבים עם עדן ספייסי">
-<meta name="twitter:description" content="מופע לייב מיוחד לילדים ולמשפחות – הופעה, תחרויות ופרסים!">
-<meta name="twitter:image" content="https://ronealishub.github.io/Data/eden-landing/hero.png">
-  <!-- Google Tag Placeholder: הטמע כאן את קוד Google Tag Manager/Analytics -->
-  <!-- Meta Pixel Placeholder: הטמע כאן את קוד Meta Pixel -->
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>סדנת טיקטוק עם עדן ספייסי</title>
 
   <style>
-    :root {
-      --spicy-red: #E90000;
-      --festival-orange: #FF7600;
-      --spicy-green: #1ED760;
-      --spicy-green-hover: #18B84F;
-      --off-white: #FFF8F2;
-      --dark: #1A1A1A;
-
-      --shavuot-cream: #FFFDF7;
-      --shavuot-gold: #D8B35A;
-      --shavuot-leaf: #7BAE4A;
-      --shavuot-lilac: #F4ECFF;
-    }
-
-    * { box-sizing: border-box; }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: "Rubik", "Heebo", sans-serif;
-      background: var(--off-white);
-      color: var(--dark);
-      direction: rtl;
-      text-align: right;
-      scroll-behavior: smooth;
-    }
-
     body {
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1120px, 92%);
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-    }
-
-    .section {
-      padding: 4.5rem 0;
-      position: relative;
-    }
-
-    .section::before {
-      content: "";
-      display: block;
-      width: 72px;
-      height: 4px;
-      border-radius: 999px;
-      margin: 0 auto 1.2rem;
-      background: linear-gradient(90deg, var(--shavuot-gold), var(--shavuot-leaf));
-      opacity: 0.75;
-    }
-
-    .stage-bg {
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 20% 15%, rgba(255, 118, 0, 0.3), transparent 45%),
-        radial-gradient(circle at 78% 28%, rgba(233, 0, 0, 0.35), transparent 42%),
-        linear-gradient(125deg, var(--spicy-red) 0%, #f34500 55%, var(--festival-orange) 100%);
-      color: var(--off-white);
-      isolation: isolate;
-    }
-
-    .stage-bg::before,
-    .stage-bg::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .stage-bg::before {
-      background:
-        conic-gradient(from 215deg at 20% 0%, rgba(255, 248, 242, 0.16), transparent 24%),
-        conic-gradient(from 150deg at 75% 0%, rgba(255, 248, 242, 0.13), transparent 28%),
-        conic-gradient(from 190deg at 52% -5%, rgba(255, 248, 242, 0.08), transparent 25%);
-      mix-blend-mode: screen;
-    }
-
-    .stage-bg::after {
-      background-image:
-        radial-gradient(circle at 12% 24%, rgba(255, 248, 242, 0.2) 0 2px, transparent 2px),
-        radial-gradient(circle at 85% 38%, rgba(255, 248, 242, 0.2) 0 2px, transparent 2px),
-        radial-gradient(circle at 35% 65%, rgba(255, 248, 242, 0.16) 0 1.5px, transparent 1.5px),
-        radial-gradient(circle at 68% 72%, rgba(255, 248, 242, 0.15) 0 2px, transparent 2px),
-        radial-gradient(circle at 48% 18%, rgba(255, 248, 242, 0.12) 0 1.5px, transparent 1.5px);
-      background-size: 220px 220px;
-      opacity: 0.7;
+      margin:0;
+      font-family: Arial;
+      background:#fff;
+      color:#111;
+      text-align:center;
     }
 
     .hero {
-      padding: 4.5rem 0 4rem;
+      background: linear-gradient(135deg,#ff3c00,#ff7a00);
+      color:white;
+      padding:40px 20px;
     }
 
-    .hero::before {
-      display: none;
+    h1 {
+      font-size:28px;
+      line-height:1.4;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 2rem;
-      align-items: center;
-      position: relative;
-      z-index: 2;
+    .section {
+      padding:30px 20px;
+      max-width:800px;
+      margin:auto;
     }
 
-    .hero-kicker {
-      margin: 0 0 0.8rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      font-size: 0.95rem;
-      opacity: 0.95;
+    .box {
+      background:#f5f5f5;
+      padding:15px;
+      border-radius:10px;
+      margin-bottom:10px;
     }
 
-    .hero h1 {
-      margin: 0;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      line-height: 1.1;
-      font-weight: 800;
+    .cta {
+      background:#00c853;
+      color:white;
+      padding:15px 25px;
+      border-radius:50px;
+      display:inline-block;
+      margin-top:20px;
+      font-weight:bold;
     }
 
-    .hero .name {
-      margin: 0.2rem 0 0.8rem;
-      font-size: clamp(3rem, 9vw, 6rem);
-      line-height: 0.95;
-      font-weight: 900;
-      text-shadow: 0 8px 24px rgba(26, 26, 26, 0.32);
-    }
-
-    .hero-sub {
-      margin: 0 0 1rem;
-      font-size: clamp(1rem, 2.2vw, 1.35rem);
-      font-weight: 500;
-    }
-
-    .hero-meta {
-      margin: 0 0 1.4rem;
-      font-size: 1rem;
-      font-weight: 500;
-      line-height: 1.7;
-    }
-
-    .hero-content {
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .cta-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.35rem;
-      width: fit-content;
-      margin-right: auto;
-      margin-left: auto;
-      border: 0;
-      border-radius: 999px;
-      background: var(--spicy-green);
-      color: var(--off-white);
-      font-weight: 800;
-      font-size: clamp(1rem, 2.6vw, 1.25rem);
-      padding: 0.95rem 1.9rem;
-      box-shadow: 0 8px 20px rgba(26, 26, 26, 0.24);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-      cursor: pointer;
-      position: relative;
-      z-index: 2;
-    }
-
-    .cta-btn:hover {
-      background: var(--spicy-green-hover);
-      transform: translateY(-2px) scale(1.03);
-      box-shadow: 0 12px 26px rgba(26, 26, 26, 0.3);
-    }
-
-    .cta-btn:focus-visible,
-    .music-btn:focus-visible {
-      outline: 3px solid var(--off-white);
-      outline-offset: 2px;
-      box-shadow: 0 0 0 4px rgba(26, 26, 26, 0.18);
-    }
-
-    .urgency {
-      margin: 0.65rem 0 0;
-      font-size: 0.9rem;
-      font-weight: 500;
-      opacity: 0.95;
-    }
-
-    .shavuot-badge {
-      margin: 0.9rem auto 0;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.4rem;
-      padding: 0.55rem 1rem;
-      border-radius: 999px;
-      background: rgba(255, 253, 247, 0.16);
-      border: 1px solid rgba(255, 255, 255, 0.28);
-      color: var(--off-white);
-      font-size: 0.95rem;
-      font-weight: 700;
-      box-shadow: 0 8px 18px rgba(26, 26, 26, 0.12);
-      backdrop-filter: blur(4px);
-    }
-
-    .hero-content::after {
-      content: "🌾 ✿ 🤍 ✿ 🌾";
-      display: block;
-      margin-top: 1rem;
-      text-align: center;
-      font-size: 1.05rem;
-      letter-spacing: 0.18rem;
-      opacity: 0.9;
-    }
-
-    .hero-image-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero-image-wrap::before {
-      content: "";
-      position: absolute;
-      width: min(420px, 78vw);
-      aspect-ratio: 1 / 1;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255, 118, 0, 0.42) 0%, rgba(233, 0, 0, 0.1) 58%, transparent 75%);
-      filter: blur(6px);
-      z-index: 0;
-    }
-
-    .hero-image {
-      position: relative;
-      z-index: 1;
-      width: min(440px, 90%);
-      height: auto;
-      object-fit: contain;
-      filter: drop-shadow(0 14px 28px rgba(26, 26, 26, 0.32));
-    }
-
-    h2 {
-      margin: 0 0 1.4rem;
-      color: var(--spicy-red);
-      font-size: clamp(1.8rem, 4.2vw, 2.8rem);
-      line-height: 1.15;
-      text-align: center;
-      position: relative;
-    }
-
-    h2::before {
-      content: "✿";
-      color: var(--shavuot-gold);
-      font-size: 0.85em;
-      margin-left: 0.45rem;
-    }
-
-    h2::after {
-      content: "✿";
-      color: var(--shavuot-gold);
-      font-size: 0.85em;
-      margin-right: 0.45rem;
-    }
-
-    .cards {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      margin-bottom: 1.5rem;
-    }
-
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,253,247,0.96));
-      border: 2px solid rgba(216, 179, 90, 0.22);
-      border-radius: 18px;
-      padding: 1rem 1.1rem;
-      box-shadow: 0 6px 14px rgba(26, 26, 26, 0.08);
-      font-size: 1.08rem;
-      line-height: 1.45;
-      font-weight: 500;
-      text-align: right;
-      position: relative;
-      z-index: 2;
-    }
-
-    .card .icon {
-      font-size: 1.55rem;
-      margin-left: 0.35rem;
-    }
-
-    .wow-box {
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(140deg, rgba(233, 0, 0, 0.95), rgba(255, 118, 0, 0.95));
-      color: var(--off-white);
-      border-radius: 24px;
-      padding: 1.8rem;
-      box-shadow: 0 12px 24px rgba(26, 26, 26, 0.2);
-      margin-bottom: 1.3rem;
-      text-align: center;
-      z-index: 2;
-    }
-
-    .wow-box::before {
-      content: "✿ 🌾 ✿";
-      position: absolute;
-      top: 12px;
-      left: 18px;
-      font-size: 0.95rem;
-      opacity: 0.22;
-    }
-
-    .wow-box p {
-      margin: 0.35rem 0;
-      font-weight: 800;
-      font-size: clamp(1.2rem, 3.7vw, 2rem);
-      line-height: 1.2;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 0.9rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .timeline-item {
-      padding: 1rem 1.1rem;
-      border-radius: 14px;
-      border-right: 6px solid var(--shavuot-gold);
-      background: linear-gradient(180deg, rgba(255, 118, 0, 0.10), rgba(255, 253, 247, 0.8));
-      font-size: 1.05rem;
-      font-weight: 600;
-      position: relative;
-      z-index: 2;
-    }
-
-    .shavuot-note {
-      margin: -0.4rem 0 1.2rem;
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--dark);
-      opacity: 0.86;
-      text-align: center;
-    }
-
-    .final-cta {
-      padding: 4.6rem 0;
-      text-align: center;
-    }
-
-    .final-cta::before {
-      display: none;
-    }
-
-    .final-cta h2,
-    .final-cta p {
-      color: var(--off-white);
-      margin-right: auto;
-      margin-left: auto;
-      text-align: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .final-cta h2 {
-      max-width: 16ch;
-      margin-bottom: 0.8rem;
-      font-size: clamp(2rem, 5vw, 3.6rem);
-    }
-
-    .final-cta h2::before,
-    .final-cta h2::after {
-      color: rgba(255,255,255,0.72);
-    }
-
-    .final-cta p {
-      margin-top: 0;
-      margin-bottom: 1.3rem;
-      font-size: clamp(1rem, 2.6vw, 1.35rem);
-      font-weight: 500;
-    }
-
-    .mobile-sticky {
-      display: none;
-    }
-
-    .new-song {
-      text-align: center;
-      padding: 2.4rem 0 2.7rem;
-      background: var(--off-white);
-      position: relative;
-      z-index: 2;
-    }
-
-    .new-song::before {
-      content: "";
-      display: block;
-      width: 92px;
-      height: 6px;
-      margin: 0 auto 16px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, var(--spicy-red), var(--festival-orange));
-      box-shadow: 0 0 14px rgba(233, 0, 0, 0.55);
-    }
-
-    .song-text {
-      margin: 0 0 14px;
-      font-size: 1rem;
-      font-weight: 800;
-      color: var(--dark);
-      opacity: .92;
-      text-align: center;
-    }
-
-    .music-icons {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .music-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 18px;
-      border-radius: 999px;
-      color: #fff;
-      font-weight: 900;
-      box-shadow: 0 10px 24px rgba(0,0,0,.12);
-      transform: translateY(0);
-      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
-      will-change: transform;
-      position: relative;
-      z-index: 2;
-    }
-
-    .music-btn.youtube { background: #FF0000; }
-    .music-btn.spotify { background: #1DB954; }
-
-    .music-svg {
-      width: 22px;
-      height: 22px;
-      color: #fff;
-      flex: 0 0 auto;
-    }
-
-    .music-btn:hover {
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 14px 34px rgba(0,0,0,.16);
-      filter: brightness(1.02);
-    }
-
-    .section-floral {
-      text-align: center;
-      font-size: 1.15rem;
-      color: var(--shavuot-gold);
-      opacity: 0.8;
-      margin: -0.3rem 0 1.2rem;
-      letter-spacing: 0.3rem;
-      animation: floralGlow 4s ease-in-out infinite;
-      position: relative;
-      z-index: 2;
-    }
-
-    /* שיבולים בפינות הדף */
-    .wheat-decoration {
-      position: fixed;
-      pointer-events: none;
-      opacity: 0.12;
-      z-index: 1;
-      animation: wheatFloat 7s ease-in-out infinite;
-    }
-
-    .wheat-left {
-      bottom: 30px;
-      left: 8px;
-      width: 150px;
-    }
-
-    .wheat-right {
-      top: 110px;
-      right: 8px;
-      width: 150px;
-      animation-delay: 1.2s;
-    }
-
-    .wheat-decoration svg {
-      width: 100%;
-      height: auto;
-      fill: none;
-      stroke: #D8B35A;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    /* שיבולים מאחורי ה-Hero */
-    .hero-wheat {
-      position: absolute;
-      pointer-events: none;
-      opacity: 0.12;
-      z-index: 1;
-      width: 150px;
-      animation: wheatFloat 6s ease-in-out infinite;
-    }
-
-    .hero-wheat-left {
-      bottom: 10px;
-      left: 4%;
-    }
-
-    .hero-wheat-right {
-      top: 18%;
-      right: 4%;
-      animation-delay: 1.5s;
-    }
-
-    .hero-wheat svg {
-      width: 100%;
-      height: auto;
-      fill: none;
-      stroke: rgba(255, 248, 242, 0.7);
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    @keyframes wheatFloat {
-      0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-6px) rotate(1deg);
-      }
-    }
-
-    @keyframes floralGlow {
-      0%, 100% {
-        opacity: 0.72;
-        transform: translateY(0);
-      }
-      50% {
-        opacity: 1;
-        transform: translateY(-2px);
-      }
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-      .music-btn {
-        animation: softPulse 2.6s ease-in-out infinite;
-      }
-
-      .music-btn.youtube {
-        animation-delay: .15s;
-      }
-
-      .music-btn.spotify {
-        animation-delay: .35s;
-      }
-
-      @keyframes softPulse {
-        0%,100% { transform: translateY(0); }
-        50% { transform: translateY(-1px); }
-      }
-    }
-
-    @media (max-width: 920px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-
-      .hero-content {
-        order: 1;
-      }
-
-      .hero-image-wrap {
-        order: 2;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      body {
-        padding-bottom: 86px;
-      }
-
-      .section {
-        padding: 3.4rem 0;
-      }
-
-      .hero {
-        padding: 3.5rem 0 3rem;
-      }
-
-      .hero .name {
-        font-size: clamp(2.5rem, 13vw, 4.5rem);
-      }
-
-      .hero-meta {
-        font-size: 0.95rem;
-      }
-
-      .shavuot-badge {
-        font-size: 0.86rem;
-        line-height: 1.4;
-      }
-
-      .hero-content::after {
-        font-size: 0.95rem;
-        letter-spacing: 0.08rem;
-      }
-
-      .wheat-left,
-      .wheat-right {
-        width: 95px;
-        opacity: 0.08;
-      }
-
-      .hero-wheat {
-        width: 90px;
-        opacity: 0.1;
-      }
-
-      .section-floral {
-        font-size: 1rem;
-        letter-spacing: 0.18rem;
-      }
-
-      .mobile-sticky {
-        position: fixed;
-        inset-inline: 0;
-        bottom: 0;
-        display: flex;
-        justify-content: center;
-        padding: 0.75rem 0.9rem;
-        background: rgba(26, 26, 26, 0.92);
-        backdrop-filter: blur(4px);
-        z-index: 99;
-      }
-
-      .mobile-sticky .cta-btn {
-        width: min(480px, 100%);
-      }
+    @media (max-width:600px){
+      h1 {font-size:22px;}
     }
   </style>
 </head>
 
 <body>
-  <div class="wheat-decoration wheat-left" aria-hidden="true">
-    <svg viewBox="0 0 120 240">
-      <path d="M60 230 C60 200 40 170 60 140 C80 110 60 80 60 50"/>
-      <path d="M60 150 L40 130"/>
-      <path d="M60 150 L80 130"/>
-      <path d="M60 120 L40 100"/>
-      <path d="M60 120 L80 100"/>
-      <path d="M60 90 L40 70"/>
-      <path d="M60 90 L80 70"/>
-    </svg>
-  </div>
 
-  <div class="wheat-decoration wheat-right" aria-hidden="true">
-    <svg viewBox="0 0 120 240">
-      <path d="M60 230 C60 200 80 170 60 140 C40 110 60 80 60 50"/>
-      <path d="M60 150 L40 130"/>
-      <path d="M60 150 L80 130"/>
-      <path d="M60 120 L40 100"/>
-      <path d="M60 120 L80 100"/>
-      <path d="M60 90 L40 70"/>
-      <path d="M60 90 L80 70"/>
-    </svg>
-  </div>
+<div class="hero">
+<h1>
+🔥 סדנת טיקטוק – איך להיות חריף ברשתות החברתיות 🌶️| עם משפיען הרשת עדן ספייסי 🔥  
+</h1>
 
-  <header class="stage-bg hero section">
-    <div class="hero-wheat hero-wheat-left" aria-hidden="true">
-      <svg viewBox="0 0 120 220">
-        <path d="M60 210 C60 180 42 155 60 130 C78 105 60 80 60 45"/>
-        <path d="M60 145 L42 128"/>
-        <path d="M60 145 L78 128"/>
-        <path d="M60 115 L42 98"/>
-        <path d="M60 115 L78 98"/>
-        <path d="M60 85 L42 68"/>
-        <path d="M60 85 L78 68"/>
-      </svg>
-    </div>
+<p>
+רוצה לדעת איך להפוך את עצמך ליותר בולט שאי אפשר להתעלם ממנו?  
+איך להביא צפיות, קהל ולקוחות דרך טיקטוק?  
+</p>
 
-    <div class="hero-wheat hero-wheat-right" aria-hidden="true">
-      <svg viewBox="0 0 120 220">
-        <path d="M60 210 C60 180 78 155 60 130 C42 105 60 80 60 45"/>
-        <path d="M60 145 L42 128"/>
-        <path d="M60 145 L78 128"/>
-        <path d="M60 115 L42 98"/>
-        <path d="M60 115 L78 98"/>
-        <path d="M60 85 L42 68"/>
-        <path d="M60 85 L78 68"/>
-      </svg>
-    </div>
+<a class="cta" href="#">🎟️ שריינו מקום עכשיו</a>
+</div>
 
-    <div class="container hero-grid">
-      <div class="hero-image-wrap">
-        <img class="hero-image" src="hero.png" alt="עדן ספייסי על הבמה" loading="eager" />
-      </div>
+<div class="section">
 
-      <div class="hero-content">
-        <p class="hero-kicker">DREAM STAGE</p>
-        <h1>חגיגת 200K עוקבים עם</h1>
-        <p class="name">עדן ספייסי</p>
-        <p class="hero-sub">לייב סטייג' — משפחתי, שמח, צבעוני ועוצמתי!</p>
-        <p class="hero-meta">📍 מרכז עסקים עזריאלי חולון &nbsp; | &nbsp; 📅 יום רביעי, 20/05/2026 18:00</p>
+<p>
+אני עדן ספייסי, יוצר תוכן עם מעל 205,000 עוקבים ומיליוני צפיות בכל חודש –  
+ובסדנה הזו אני מלמד אותך איך להיות חד, חריף ומדויק ברשתות החברתיות.  
+</p>
 
-        <a class="cta-btn"
-           aria-label="קנה כרטיס עכשיו"
-           href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-190&saleChannelCode=WEB&languageid=he_IL"
-           target="_blank" rel="noopener"> קנה כרטיס עכשיו 🔥</a>
+<h2>🎯 מה נלמד בסדנה:</h2>
 
-        <p class="urgency">⚠ מספר המקומות מוגבל</p>
-        <p class="shavuot-badge">🌾 מהדורת שבועות חגיגית • באווירה לבנה, פרחונית ומשפחתית</p>
-      </div>
-    </div>
-  </header>
+<div class="box">איך לעמוד מול מצלמה בביטחון מלא</div>
+<div class="box">איך לדבר בצורה חדה שמושכת קהל</div>
+<div class="box">איך לבנות סרטונים שתופסים בשנייה הראשונה</div>
+<div class="box">איך להפוך תוכן לכלי שמביא לקוחות</div>
+<div class="box">איך לבלוט ולהיות חריף ברשתות החברתיות</div>
 
-  <section class="new-song" aria-label="לשמיעת השיר החדש">
-    <div class="container">
-      <p class="song-text">לשמיעת השיר החדש</p>
+<h2>🚀 למי זה מתאים?</h2>
 
-      <div class="music-icons">
-        <a class="music-btn youtube"
-           href="https://youtu.be/jobfUpJZJfI?si=AyFIZoRUo1aYPsh7"
-           target="_blank" rel="noopener"
-           aria-label="פתח ביוטיוב">
-          <svg class="music-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M23.498 6.186a3.014 3.014 0 0 0-2.12-2.133C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.379.553A3.014 3.014 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.014 3.014 0 0 0 2.12 2.133C4.495 20.5 12 20.5 12 20.5s7.505 0 9.379-.553a3.014 3.014 0 0 0 2.12-2.133C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/>
-            <path d="M9.75 15.5v-7l6.25 3.5-6.25 3.5z" fill="currentColor"/>
-          </svg>
-          <span class="label">YouTube</span>
-        </a>
+<div class="box">בעלי עסקים שרוצים להביא לקוחות מטיקטוק</div>
+<div class="box">יוצרים בתחילת הדרך שרוצים לפרוץ</div>
+<div class="box">נוער שרוצה להתחזק מול מצלמה ולבנות ביטחון</div>
 
-        <a class="music-btn spotify"
-           href="https://open.spotify.com/track/2afrK3A357tLHXmAP4xQNO?si=XQNCahNuSmO37pYm7wgMwQ"
-           target="_blank" rel="noopener"
-           aria-label="פתח בספוטיפיי">
-          <svg class="music-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z"/>
-            <path d="M17.376 17.345a.75.75 0 0 1-1.032.246c-2.826-1.727-6.385-2.118-10.57-1.164a.75.75 0 1 1-.333-1.463c4.58-1.044 8.52-.598 11.66 1.318a.75.75 0 0 1 .275 1.063z" fill="currentColor"/>
-            <path d="M18.31 14.84a.9.9 0 0 1-1.238.296c-3.235-1.99-8.16-2.567-11.974-1.41a.9.9 0 1 1-.522-1.723c4.34-1.314 9.73-.67 13.463 1.624a.9.9 0 0 1 .271 1.213z" fill="currentColor"/>
-            <path d="M18.99 12.13a1.05 1.05 0 0 1-1.446.35c-3.705-2.226-9.35-2.431-12.876-1.36a1.05 1.05 0 1 1-.61-2.01c4.045-1.228 10.222-1 14.49 1.57a1.05 1.05 0 0 1 .442 1.45z" fill="currentColor"/>
-          </svg>
-          <span class="label">Spotify</span>
-        </a>
-      </div>
-    </div>
-  </section>
+<h2>📍 פרטים</h2>
 
-  <main>
-    <section class="section" id="happenings">
-      <div class="container">
-        <div class="section-floral" aria-hidden="true">✿ ❀ 🌾 ❀ ✿</div>
-        <h2>🚀 מה הולך לקרות שם?!</h2>
+<p>
+📍 סדנת טיקטוק בשיתוף הוט סינמה  
+<br><br>
+🎟️ מוגבל ל-60 כרטיסים בלבד!  
+<br><br>
+⏳ מתקיימת בשני סבבים – כל הקודם זוכה  
+<br><br>
+עלות כרטיס~ 150 שקלים 
+</p>
 
-        <div class="cards">
-          <article class="card"><span class="icon">🎤</span>הופעה חיה של השיר החדש (לפני כולם!)</article>
-          <article class="card"><span class="icon">⭐</span>אתגר המזלות הגדול</article>
-          <article class="card"><span class="icon">✨</span>סגולות וחיזוקים חודש ניסן</article>
-          <article class="card"><span class="icon">🎮</span>תפאורת גיימינג: בריינרוט • בראול סטארס • משחקי הדיונון</article>
-          <article class="card"><span class="icon">🍭</span>עמדות טעימות וחריפות של טסה ועוד הפתעות</article>
-        </div>
+<p>
+📍 מרכז עסקים עזריאלי חולון   |   📅 יום רביעי, 20/05/2026
+<br><br>
+סבב ראשון 17:00 ~ 18:30
+<br>
+סבב שני 19:00 ~ 20:30
+</p>
 
-        <a class="cta-btn"
-           aria-label="שריין מקום עכשיו"
-           href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-190&saleChannelCode=WEB&languageid=he_IL"
-           target="_blank" rel="noopener"> שריינו מקום עכשיו 🎟</a>
-      </div>
-    </section>
+<a class="cta" href="#">🎟️ שריינו מקום עכשיו</a>
 
-    <section class="section" id="prizes">
-      <div class="container">
-        <div class="section-floral" aria-hidden="true">✿ ❀ 🌾 ❀ ✿</div>
-        <h2>🎁 פרסים והגרלות</h2>
+</div>
 
-        <div class="wow-box" aria-label="פרסים מרכזיים באירוע">
-          <p>📱 אייפון 17 חדש דנדש!!!</p>
-          <p>📚 סדרת הספרים "האוצרות האבודים"</p>
-          <p>🎉 ועוד הפתעות שוות במיוחד</p>
-        </div>
-
-        <a class="cta-btn"
-           aria-label="אני רוצה להיות שם"
-           href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-190&saleChannelCode=WEB&languageid=he_IL"
-           target="_blank" rel="noopener"> אני רוצה להיות שם! 🔥</a>
-      </div>
-    </section>
-
-    <section class="section" id="schedule">
-      <div class="container">
-        <div class="section-floral" aria-hidden="true">✿ ❀ 🌾 ❀ ✿</div>
-        <h2>🕒 לו״ז</h2>
-        <p class="shavuot-note">🤍 ערב חגיגי ברוח שבועות עם אווירה לבנה, שמחה ומשפחתית</p>
-
-        <div class="timeline" aria-label="לוח זמנים האירוע">
-          <div class="timeline-item">18:00 – התכנסות וכיבוד</div>
-          <div class="timeline-item">18:30 – תחילת האירוע (תחרויות, שירים, דברי תורה, אתגר המזלות)</div>
-          <div class="timeline-item">19:00 – טקס עוגת ה-200K + הכרזת הזוכים</div>
-        </div>
-
-        <a class="cta-btn"
-           aria-label="קנה כרטיס עכשיו"
-           href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-190&saleChannelCode=WEB&languageid=he_IL"
-           target="_blank" rel="noopener"> קנה כרטיס עכשיו 🎟</a>
-      </div>
-    </section>
-  </main>
-
-  <section class="stage-bg final-cta">
-    <div class="container">
-      <h2>🎉 אל תפספסו את חגיגת ה-200K בלייב!</h2>
-      <p>המופע מתאים לכל הגילאים — בואו לחגוג עם עדן ספייסי על במה אמיתית</p>
-
-      <a class="cta-btn"
-         aria-label="קנה כרטיס עכשיו"
-         href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-190&saleChannelCode=WEB&languageid=he_IL"
-         target="_blank" rel="noopener"> קנה כרטיס עכשיו 🔥</a>
-    </div>
-  </section>
-
-  <div class="mobile-sticky" aria-hidden="false">
-    <a class="cta-btn"
-       aria-label="קנה כרטיס עכשיו"
-       href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-190&saleChannelCode=WEB&languageid=he_IL"
-       target="_blank" rel="noopener"> קנה כרטיס עכשיו 🔥</a>
-  </div>
-
-  <script>
-    // JavaScript intentionally minimal for performance.
-  </script>
 </body>
 </html>
