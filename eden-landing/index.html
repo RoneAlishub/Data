@@ -265,7 +265,6 @@
       text-decoration: none;
       position: relative;
       overflow: hidden;
-      text-align: center;
     }
 
     .cta-primary::before {
@@ -784,6 +783,34 @@
       text-align: center;
     }
 
+
+    .round-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1200;
+      padding: 1rem;
+    }
+
+    .round-modal.open { display: flex; }
+
+    .round-modal-card {
+      width: min(520px, 100%);
+      background: var(--dark-card);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 16px;
+      padding: 1rem;
+    }
+
+    .round-actions {
+      display: grid;
+      gap: .65rem;
+      margin-top: .8rem;
+    }
+
     .mobile-sticky { display: none; }
 
     footer {
@@ -810,7 +837,7 @@
     @media (max-width: 640px) {
       .section { padding: 3.5rem 0; }
       .hero { min-height: auto; padding: 4rem 0 3rem; }
-      body { padding-bottom: 84px; }
+      body { padding-bottom: 74px; }
 
       .mobile-sticky {
         display: flex;
@@ -825,7 +852,7 @@
         justify-content: center;
       }
 
-      .mobile-sticky .cta-primary { width: min(480px, 100%); }
+      .mobile-sticky .cta-primary { width: min(480px, 100%); padding: .85rem 1rem; font-size: .98rem; }
       .learn-grid { grid-template-columns: 1fr; }
       .about-stats { grid-template-columns: 1fr 1fr; }
     }
@@ -877,19 +904,9 @@
         </div>
 
         <div class="hero-cta-group">
-          <!-- שינוי: שני כפתורים בהירו -->
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-            <a class="cta-primary"
-               href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-256&saleChannelCode=WEB&languageid=he_IL&returnUrl=https:%2F%2Fhotcinema.co.il%2F"
-               target="_blank" rel="noopener">
-              🎟️ כרטיסים ל-17:00
-            </a>
-            <a class="cta-primary"
-               href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-257&saleChannelCode=WEB&languageid=he_IL&returnUrl=https:%2F%2Fhotcinema.co.il%2F"
-               target="_blank" rel="noopener">
-              🎟️ כרטיסים ל-19:00
-            </a>
-          </div>
+          <a class="cta-primary open-round-modal" href="#" data-open-rounds="1">
+            🎟️ שריינו מקום עכשיו
+          </a>
           <div class="urgency-badge">⚠️ מוגבל ל-60 כרטיסים בלבד!</div>
         </div>
       </div>
@@ -1087,7 +1104,7 @@
 
           <div class="ticket-price">
             <div class="price-label">מחיר כרטיס</div>
-            <div class="price-amount">~180 ₪</div>
+            <div class="price-amount">~150 ₪</div>
             <div class="price-sub">לסבב אחד</div>
           </div>
 
@@ -1101,22 +1118,10 @@
           <div class="ticket-limit">
             ⚠️ מוגבל ל-60 כרטיסים בלבד!
           </div>
-          
-          <!-- שינוי: שני כפתורים בכרטיס התמחור -->
-          <div style="display: flex; gap: 0.8rem; flex-direction: column;">
-            <a class="cta-primary"
-               style="width:100%; font-size:1rem; justify-content:center;"
-               href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-256&saleChannelCode=WEB&languageid=he_IL&returnUrl=https:%2F%2Fhotcinema.co.il%2F"
-               target="_blank" rel="noopener">
-              🎟️ שריין מקום ל-17:00
-            </a>
-            <a class="cta-primary"
-               style="width:100%; font-size:1rem; justify-content:center;"
-               href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-257&saleChannelCode=WEB&languageid=he_IL&returnUrl=https:%2F%2Fhotcinema.co.il%2F"
-               target="_blank" rel="noopener">
-              🎟️ שריין מקום ל-19:00
-            </a>
-          </div>
+
+          <a class="cta-primary open-round-modal" href="#" data-open-rounds="1">
+            🎟️ שריינו מקום עכשיו
+          </a>
         </div>
       </div>
     </div>
@@ -1130,22 +1135,12 @@
       <p class="section-sub reveal">
         אל תפספס את ההזדמנות – 60 מקומות בלבד, שני סבבים, יום אחד.
       </p>
-      
-      <!-- שינוי: שני כפתורים בסוף העמוד -->
-      <div class="reveal" style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-        <a class="cta-primary"
-           href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-256&saleChannelCode=WEB&languageid=he_IL&returnUrl=https:%2F%2Fhotcinema.co.il%2F"
-           target="_blank" rel="noopener"
-           style="font-size:1.2rem; padding:1.2rem 2rem;">
-          🎟️ כרטיסים ל-17:00
-        </a>
-        <a class="cta-primary"
-           href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-257&saleChannelCode=WEB&languageid=he_IL&returnUrl=https:%2F%2Fhotcinema.co.il%2F"
-           target="_blank" rel="noopener"
-           style="font-size:1.2rem; padding:1.2rem 2rem;">
-          🎟️ כרטיסים ל-19:00
-        </a>
-      </div>
+      <a class="cta-primary reveal open-round-modal"
+         href="#"
+         data-open-rounds="1"
+         style="font-size:1.2rem; padding:1.2rem 3rem; margin:0 auto;">
+        🎟️ שריינו מקום עכשיו
+      </a>
     </div>
   </section>
 
@@ -1156,20 +1151,19 @@
   </footer>
 
   <div class="mobile-sticky">
-    <!-- שינוי: שני כפתורים בפס הדביק במובייל -->
-    <div style="display: flex; gap: 0.5rem; width: 100%; max-width: 480px; justify-content: center;">
-      <a class="cta-primary"
-         href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-256&saleChannelCode=WEB&languageid=he_IL&returnUrl=https:%2F%2Fhotcinema.co.il%2F"
-         target="_blank" rel="noopener"
-         style="flex: 1; width: auto; padding: 0.8rem 0; font-size: 0.95rem; justify-content: center;">
-        🎟️ ל-17:00
-      </a>
-      <a class="cta-primary"
-         href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-257&saleChannelCode=WEB&languageid=he_IL&returnUrl=https:%2F%2Fhotcinema.co.il%2F"
-         target="_blank" rel="noopener"
-         style="flex: 1; width: auto; padding: 0.8rem 0; font-size: 0.95rem; justify-content: center;">
-        🎟️ ל-19:00
-      </a>
+    <a class="cta-primary open-round-modal" href="#" data-open-rounds="1">
+      🎟️ שריינו מקום עכשיו
+    </a>
+  </div>
+
+  <div class="round-modal" id="roundModal" aria-hidden="true">
+    <div class="round-modal-card">
+      <strong>בחרו סבב לרכישה</strong>
+      <div class="round-actions">
+        <a class="cta-primary" href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-256&saleChannelCode=WEB&languageid=he_IL&returnUrl=https:%2F%2Fhotcinema.co.il%2F" target="_blank" rel="noopener">🎟️ סבב ראשון 17:00</a>
+        <a class="cta-primary" href="https://tickets.hotcinema.co.il/site/1196/tickets?code=1196-257&saleChannelCode=WEB&languageid=he_IL&returnUrl=https:%2F%2Fhotcinema.co.il%2F" target="_blank" rel="noopener">🎟️ סבב שני 19:00</a>
+        <a href="#" id="closeRoundModal" style="text-align:center; color:var(--text-muted);">סגור</a>
+      </div>
     </div>
   </div>
 
@@ -1184,6 +1178,26 @@
       });
     }, { threshold: 0.12 });
     reveals.forEach(el => observer.observe(el));
+
+    const modal = document.getElementById('roundModal');
+    const openers = document.querySelectorAll('.open-round-modal');
+    const closeBtn = document.getElementById('closeRoundModal');
+    openers.forEach(btn => btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+    }));
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    });
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+      }
+    });
   </script>
 </body>
 </html>
